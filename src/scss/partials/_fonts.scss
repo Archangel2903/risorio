@@ -1,2 +1,73 @@
 $fonts-path: '../fonts/';
 
+@font-face {
+  font-family:'Play';
+  src: url('#{$fonts-path}Play-Bold.eot');
+  src: url('#{$fonts-path}Play-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Play-Bold.woff2') format('woff2'),
+  url('#{$fonts-path}Play-Bold.woff') format('woff'),
+  url('#{$fonts-path}Play-Bold.ttf') format('truetype'),
+  url('#{$fonts-path}Play-Bold.svg#Play-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-04F9;
+  font-display: swap;
+}
+
+@font-face {
+  font-family:'Play';
+  src: url('#{$fonts-path}Play.eot');
+  src: url('#{$fonts-path}Play.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Play.woff2') format('woff2'),
+  url('#{$fonts-path}Play.woff') format('woff'),
+  url('#{$fonts-path}Play.ttf') format('truetype'),
+  url('#{$fonts-path}Play.svg#Play') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-04F9;
+  font-display: swap;
+}
+
+@font-face {
+  font-family:'Montserrat Alternates';
+  src: url('#{$fonts-path}Montserrat Alternates Light.eot');
+  src: url('#{$fonts-path}Montserrat Alternates Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Montserrat Alternates Light.woff2') format('woff2'),
+  url('#{$fonts-path}Montserrat Alternates Light.woff') format('woff'),
+  url('#{$fonts-path}Montserrat Alternates Light.ttf') format('truetype'),
+  url('#{$fonts-path}Montserrat Alternates Light.svg#Montserrat Alternates Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-052E;
+}
+
+@font-face {
+  font-family:'Montserrat Alternates';
+  src: url('#{$fonts-path}Montserrat Alternates Regular.eot');
+  src: url('#{$fonts-path}Montserrat Alternates Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Montserrat Alternates Regular.woff2') format('woff2'),
+  url('#{$fonts-path}Montserrat Alternates Regular.woff') format('woff'),
+  url('#{$fonts-path}Montserrat Alternates Regular.ttf') format('truetype'),
+  url('#{$fonts-path}Montserrat Alternates Regular.svg#Montserrat Alternates Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-052E;
+}
+
+@font-face {
+  font-family:'Montserrat Alternates';
+  src: url('#{$fonts-path}Montserrat Alternates Bold.eot');
+  src: url('#{$fonts-path}Montserrat Alternates Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Montserrat Alternates Bold.woff2') format('woff2'),
+  url('#{$fonts-path}Montserrat Alternates Bold.woff') format('woff'),
+  url('#{$fonts-path}Montserrat Alternates Bold.ttf') format('truetype'),
+  url('#{$fonts-path}Montserrat Alternates Bold.svg#Montserrat Alternates Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-052E;
+}

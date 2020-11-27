@@ -6,6 +6,7 @@
 ***********************************************************/
 * {
   box-sizing: border-box;
+  outline: none;
 
   &:before, &:after {
     box-sizing: border-box;
@@ -19,6 +20,7 @@ html, body {
   text-size-adjust: none;
   font-family: $font-family-base;
   font-size: $font-size-default;
+  background: #faf5f3;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
@@ -35,7 +37,8 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @include transition($transition-base);
   &:hover {
-    //text-decoration: underline;
+    color: $main-second-color;
+    text-decoration: none;
   }
   &:active,
   &:focus,
@@ -305,18 +308,18 @@ iframe {
 
 ::selection {
   text-shadow: none;
-  color: $text-color;
+  color: #ffffff;
   background: $main-first-color;
 }
 
 ::-moz-selection {
   text-shadow: none;
-  color: $text-color;
+  color: #ffffff;
   background: $main-first-color;
 }
 
 ::-ms-selection {
   text-shadow: none;
-  color: $text-color;
+  color: #ffffff;
   background: $main-first-color;
 }
