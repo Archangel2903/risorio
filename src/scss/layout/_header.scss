@@ -77,10 +77,13 @@ header.header {
   }
 
   &__list {
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   &__link {
+    max-width: 240px;
     margin-right: 36px;
     color: #ffffff;
     font-size: 20px;

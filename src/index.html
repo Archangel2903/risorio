@@ -255,7 +255,7 @@
                             </div>
                             <div class="col-6 px-5 text-center">
                                 <div class="about-lifting">
-                                    <div class="about-lifting__box">
+                                    <div class="about-lifting__box h-auto">
                                         <p class="about-lifting__box-title"><span class="about-lifting__box-ico ico-bottom"><svg><use xlink:href="img/spritemap.svg#sprite-lifting-2"></use></svg></span>Экономия времени</p>
                                         <p class="about-lifting__box-text">Тейпы не ограничивают твою активность. С ними ты можешь спокойно заниматься любыми повседневными делами. Идеально подходят тем, кому не хватает времени на длительные процедуры по уходу за собой.</p>
                                     </div>
@@ -415,7 +415,7 @@
                         <p class="reviews__box-title">Елена Киреева</p>
                         <p class="reviews__box-text">В виду специфики моей профессии модели часто просят меня проконсультировать их по поводу косметических средств. Я привык советовать девушкам только то, что испробовал на себе и увидел результат. Risorio beauty tape занимает в моём списке почётное место как необременительное, и в то же время эффективное средство ухода за собой.</p>
                         <div class="reviews__box-rating">
-
+                            <input type="text" class="rating-input rating-read" value="2">
                         </div>
                     </div>
 
@@ -428,7 +428,7 @@
                         <p class="reviews__box-title">Елена Киреева</p>
                         <p class="reviews__box-text">В виду специфики моей профессии модели часто просят меня проконсультировать их по поводу косметических средств. Я привык советовать девушкам только то, что испробовал на себе и увидел результат. Risorio beauty tape занимает в моём списке почётное место как необременительное, и в то же время эффективное средство ухода за собой.</p>
                         <div class="reviews__box-rating">
-
+                            <input type="text" class="rating-input rating-read" value="5">
                         </div>
                     </div>
 
@@ -441,14 +441,14 @@
                         <p class="reviews__box-title">Елена Киреева</p>
                         <p class="reviews__box-text">В виду специфики моей профессии модели часто просят меня проконсультировать их по поводу косметических средств. Я привык советовать девушкам только то, что испробовал на себе и увидел результат. Risorio beauty tape занимает в моём списке почётное место как необременительное, и в то же время эффективное средство ухода за собой.</p>
                         <div class="reviews__box-rating">
-
+                            <input type="text" class="rating-input rating-read" value="3">
                         </div>
                     </div>
                 </div>
 
                 <div class="row review">
-                    <div class="col-12">
-                        <a href="#" class="reviews__button btn btn-primary">Написать отзыв</a>
+                    <div class="col-12 d-flex flex-row flex-wrap justify-content-center mt-4 pt-2">
+                        <a href="#" class="reviews__button btn btn-secondary">Написать отзыв <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
                     </div>
                 </div>
             </div>
@@ -473,12 +473,14 @@
                     <div class="col-5">
                         <div class="faq__special">
                             <div class="reviews__box">
-                                <picture class="reviews__box-pic">
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/review-photo01.png') %>" alt="">
-                                </picture>
+                                <div class="reviews__box-head">
+                                    <picture class="reviews__box-pic">
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/review-photo01.png') %>" alt="">
+                                    </picture>
 
-                                <p class="reviews__box-profname">Провизор-технолог</p>
-                                <p class="reviews__box-title">Татьяна Кичайкина</p>
+                                    <p class="reviews__box-profname">Провизор-технолог</p>
+                                    <p class="reviews__box-title">Татьяна Кичайкина</p>
+                                </div>
                                 <p class="reviews__box-text">Принцип действия Risorio beauty tape основан на моделировании мышечно-фасциального сегмента. Согласно последним исследованиям, основной причиной появления мимических морщин является гипертонус лицевых мышц.   Тейпы Risorio эффективно решают эту проблему, а также способствуют улучшению кровоснабжения, благодаря чему ткани получают больше кислорода и питательных веществ. Улучшается и лимфодренажный процесс, способствуя уменьшению отёчности.   В результате комплексного воздействия происходит эстетическое моделирование и омоложение лица: разглаживание морщин, выраженный лифтинг-эффект, повышение упругости и эластичности кожи, а также общее улучшение её состояния.</p>
                             </div>
                         </div>
@@ -490,16 +492,44 @@
                                 <span>вопрос</span>
                             </p>
 
-                            <input type="text" placeholder="Ф.И.О">
-                            <input type="text" placeholder="Телефон">
-                            <input type="text" placeholder="Email">
+                            <div class="form-group">
+                                <span class="faq__form-input-ico">
+                                        <svg><use xlink:href="img/spritemap.svg#sprite-user"></use></svg>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Ф.И.О">
+                            </div>
 
-                            <textarea name="faq-comment" id="faq_comment" placeholder="Ваш вопрос"></textarea>
+                            <div class="form-group">
+                                <span class="faq__form-input-ico">
+                                        <svg><use xlink:href="img/spritemap.svg#sprite-phone"></use></svg>
+                                </span>
+                                <input type="tel" class="form-control mask-phone" placeholder="Телефон">
+                            </div>
 
-                            <input type="submit" class="faq__form-submit btn btn-primary" value="Отправить">
+                            <div class="form-group">
+                                <span class="faq__form-input-ico">
+                                        <svg><use xlink:href="img/spritemap.svg#sprite-mail"></use></svg>
+                                </span>
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+
+                            <div class="form-group">
+                                <span class="faq__form-input-ico">
+                                        <svg><use xlink:href="img/spritemap.svg#sprite-comment"></use></svg>
+                                </span>
+                                <textarea name="faq-comment" id="faq_comment" class="form-control" placeholder="Ваш вопрос"></textarea>
+                            </div>
+
+                            <!--<input type="submit" class="faq__form-submit btn btn-secondary" value="Отправить">-->
+                            <button type="submit" class="faq__form-submit btn btn-secondary">Отправить <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></button>
                         </form>
                     </div>
                 </div>
+            </div>
+            <div class="section-separator">
+                <svg>
+                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
+                </svg>
             </div>
         </div>
 
@@ -571,6 +601,9 @@
         <picture class="head-decorator">
             <img src="<%= require('./img/footer-head.png') %>" alt="">
         </picture>
+        <picture class="footer-decorator">
+            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/leaf-footer.png') %>" alt="">
+        </picture>
 
         <a href="index.html" class="footer__logo">
             <svg>
@@ -607,6 +640,7 @@
                             <a href="" class="main-menu__link">Что ты получишь</a>
                             <a href="" class="main-menu__link">Преимущества</a>
                             <a href="" class="main-menu__link">Результаты</a>
+                            <a href="" class="main-menu__link">пользовательское соглашение</a>
                         </nav>
                     </div>
                 </div>

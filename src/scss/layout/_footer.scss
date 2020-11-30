@@ -16,17 +16,10 @@ footer.footer {
   background-size: 112px;
   background-blend-mode: luminosity;
 
-  &__logo {
-    position: relative;
-    display: block;
-    max-width: 50px;
-    margin: -90px auto 20px;
-    z-index: 1;
-    svg {
-      width: 46px;
-      height: 63px;
-      fill:#f8eae5;
-    }
+  .footer-decorator {
+    position: absolute;
+    top: -100%;
+    right: -250px;
   }
 }
 

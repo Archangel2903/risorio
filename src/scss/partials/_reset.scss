@@ -1,6 +1,10 @@
 @import 'mixins';
 @import 'variables';
 
+$input-placeholder-color: $text-color;
+$input-placeholder-font: $font-family-custom;
+$input-placeholder-size: 15px;
+
 /***********************************************************
 *************************** RESET **************************
 ***********************************************************/
@@ -104,16 +108,18 @@ button, input, textarea {
 }
 
 ::-webkit-input-placeholder {
-  font-weight: $font-weight-light;
-  font-size: 1rem;
   color: $input-placeholder-color;
+  font-family: $input-placeholder-font;
+  font-size: $input-placeholder-size;
+  font-weight: $font-weight-light;
   transition: $transition-base;
 }
 
 ::-webkit-textarea-placeholder {
-  font-weight: $font-weight-light;
-  font-size: 1rem;
   color: $input-placeholder-color;
+  font-family: $input-placeholder-font;
+  font-size: $input-placeholder-size;
+  font-weight: $font-weight-light;
   transition: $transition-base;
 }
 
@@ -125,6 +131,10 @@ input {
     padding: 0 5px;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
+    color: $text-color;
+    font-family: $font-family-custom;
+    font-size: 15px;
+    line-height: 26px;
 
     &:focus {
       background: none;
@@ -166,15 +176,17 @@ input {
   }
 
   &::-moz-placeholder {
-    font-weight: $font-weight-light;
-    font-size: 1rem;
     color: $input-placeholder-color;
+    font-family: $input-placeholder-font;
+    font-size: $input-placeholder-size;
+    font-weight: $font-weight-light;
     transition: $transition-base;
   }
   &::-ms-placeholder {
-    font-weight: $font-weight-light;
-    font-size: 1rem;
     color: $input-placeholder-color;
+    font-family: $input-placeholder-font;
+    font-size: $input-placeholder-size;
+    font-weight: $font-weight-light;
     transition: $transition-base;
   }
 }
@@ -185,6 +197,10 @@ button {
 
 textarea {
   padding: 0 5px;
+  color: $text-color;
+  font-family: $font-family-custom;
+  font-size: 15px;
+  line-height: 26px;
 
   &:focus {
     background: none;
@@ -204,15 +220,17 @@ textarea {
   }
 
   &::-moz-placeholder {
-    font-weight: $font-weight-light;
-    font-size: 1rem;
     color: $input-placeholder-color;
+    font-family: $input-placeholder-font;
+    font-weight: $font-weight-light;
+    font-size: $input-placeholder-size;
     transition: $transition-base;
   }
   &::-ms-placeholder {
-    font-weight: $font-weight-light;
-    font-size: 1rem;
     color: $input-placeholder-color;
+    font-family: $input-placeholder-font;
+    font-weight: $font-weight-light;
+    font-size: $input-placeholder-size;
     transition: $transition-base;
   }
 }
