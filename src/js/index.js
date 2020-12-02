@@ -10,6 +10,19 @@ import Swiper from 'swiper/dist/js/swiper.min';
 import noUiSlider from 'nouislider';
 import IMask from 'imask';
 
+function headerPosition() {
+    let offsetY = window.pageYOffset;
+    let header = document.querySelector('header.header');
+
+    console.log(header);
+
+    if (offsetY > 0) {
+        header.classList.add('offset-y');
+    }
+    else {
+        header.classList.remove('offset-y');
+    }
+}
 
 $(window).on('load', function () {
     let b = $('body');
@@ -20,10 +33,34 @@ $(window).on('load', function () {
         b.addClass('web');
     }
 
+    headerPosition();
+
     b.removeClass('loaded');
 });
 
+document.addEventListener('scroll', headerPosition, {passive: true});
+
 $(function () {
+    // Callback
+    $('.callback').on('click', function () {
+        let content = $('.header-content-wrap');
+        let form = $('.header-form-wrap');
+
+        $('.callback-close').on('click', function () {
+            form.addClass('d-none');
+            content.removeClass('d-none');
+        });
+
+        if (!content.hasClass('d-none')) {
+            content.addClass('d-none');
+            form.removeClass('d-none');
+        }
+        else {
+            form.addClass('d-none');
+            content.removeClass('d-none');
+        }
+    });
+
     // Swiper slider
     if ($('.swiper-container').length) {
         let slider;

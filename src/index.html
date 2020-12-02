@@ -24,37 +24,59 @@
                     </a>
                 </div>
 
-                <div class="col-8 d-flex flex-wrap flex-column justify-content-around">
-                    <div class="contacts justify-content-end">
-                        <a href="https://www.instagram.com/" class="contacts__link" target="_blank">
+                <div class="col-11 header-content-wrap">
+                    <div class="row">
+                        <div class="col-9 d-flex flex-wrap flex-column justify-content-around">
+                            <div class="contacts justify-content-end">
+                                <a href="https://www.instagram.com/" class="contacts__link" target="_blank">
                                 <span class="contacts__ico">
                                     <svg>
                                         <use xlink:href="img/spritemap.svg#sprite-instagram"></use>
                                     </svg>
                                 </span>
-                        </a>
+                                </a>
 
-                        <a href="tel:84957895686" class="contacts__link">
+                                <a href="tel:84957895686" class="contacts__link">
                             <span class="contacts__ico">
                                 <svg><use xlink:href="img/spritemap.svg#sprite-phone"></use></svg>
                             </span>
-                            <span>8 (495) 789-56-86</span>
-                        </a>
-                    </div>
+                                    <span>8 (495) 789-56-86</span>
+                                </a>
+                            </div>
 
-                    <div class="main-menu justify-content-end">
-                        <button class="main-menu__switch"></button>
-                        <nav class="main-menu__list">
-                            <a href="about.html" class="main-menu__link">О продукте</a>
-                            <a href="" class="main-menu__link">Что ты получишь</a>
-                            <a href="" class="main-menu__link">Преимущества</a>
-                            <a href="" class="main-menu__link">Результаты</a>
-                        </nav>
+                            <div class="main-menu justify-content-end">
+                                <button class="main-menu__switch"></button>
+                                <nav class="main-menu__list">
+                                    <a href="#about" class="main-menu__link">О продукте</a>
+                                    <a href="#types" class="main-menu__link">Что ты получишь</a>
+                                    <a href="#benefits" class="main-menu__link">Преимущества</a>
+                                    <a href="#result" class="main-menu__link">Результаты</a>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <a href="#callback" class="callback">заказать звонок</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-3">
-                    <a href="#callback" class="callback">заказать звонок</a>
+                <div class="col-11 header-form-wrap d-none py-1">
+                    <form action="" class="form-inline header-form">
+                        <div class="form-group">
+                            <svg><use xlink:href="img/spritemap.svg#sprite-phone"></use></svg>
+                            <input type="tel" class="header-form__input mask-phone form-control" placeholder="Ваш телефон">
+                        </div>
+
+                        <div class="form-group">
+                            <svg><use xlink:href="img/spritemap.svg#sprite-user"></use></svg>
+                            <input type="text" class="header-form__input form-control" placeholder="Ваше имя">
+                        </div>
+
+                        <button type="submit" class="header-form__submit btn btn-light">Заказать <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></button>
+
+                        <button class="header-form__close callback-close">закрыть</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -66,11 +88,11 @@
         <div class="section section-banner">
             <div class="section-bg">
                 <picture class="section-banner__pic">
-                    <img src="<%= require('./img/main-banner.jpg') %>" class="section-banner__img" alt="">
+                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/main-banner.jpg') %>" class="section-banner__img" alt="">
                 </picture>
             </div>
 
-            <div class="container banner-container">
+            <div class="container main-banner-container">
                 <div class="row">
                     <div class="col-md-4 offset-md-1 pl-md-0">
                         <div class="banner-content ml-md-5">
@@ -532,67 +554,6 @@
                 </svg>
             </div>
         </div>
-
-        <!--<div class="section">
-            <div class="container">
-                <h2>Section Slider</h2>
-
-                <div class="main-slider swiper-container">
-                    <div class="swiper-wrapper">
-                        &lt;!&ndash; Slides &ndash;&gt;
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <picture>
-                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="example" title="example">
-                            </picture>
-                        </div>
-                    </div>
-
-                    <div class="swiper-pagination"></div>
-
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                    &lt;!&ndash;<div class="swiper-scrollbar"></div>&ndash;&gt;
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="container">
-                <h2>Section Pictures</h2>
-                <picture>
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/placeholder-img.jpg') %>" alt="loader" title="loader">
-                </picture>
-
-                <svg>
-                    <use xlink:href="img/spritemap.svg#sprite-ok"></use>
-                </svg>
-            </div>
-        </div>-->
     </main>
     <!-- CONTENT END -->
 
@@ -636,11 +597,11 @@
                     <div class="main-menu justify-content-start">
                         <button class="main-menu__switch"></button>
                         <nav class="main-menu__list">
-                            <a href="about.html" class="main-menu__link">О продукте</a>
-                            <a href="" class="main-menu__link">Что ты получишь</a>
-                            <a href="" class="main-menu__link">Преимущества</a>
-                            <a href="" class="main-menu__link">Результаты</a>
-                            <a href="" class="main-menu__link">пользовательское соглашение</a>
+                            <a href="#about" class="main-menu__link">О продукте</a>
+                            <a href="#types" class="main-menu__link">Что ты получишь</a>
+                            <a href="#benefits" class="main-menu__link">Преимущества</a>
+                            <a href="#result" class="main-menu__link">Результаты</a>
+                            <a href="#policy" class="main-menu__link">пользовательское соглашение</a>
                         </nav>
                     </div>
                 </div>

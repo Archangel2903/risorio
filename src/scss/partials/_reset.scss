@@ -140,15 +140,23 @@ input {
       background: none;
 
       &::-webkit-input-placeholder {
-        color: transparent;
+        color: transparent !important;
+        opacity: 0;
         transform: rotate3d(1, 0, 0, 90deg);
       }
       &::-moz-placeholder {
-        color: transparent;
+        color: transparent !important;
+        opacity: 0;
         transform: rotate3d(1, 0, 0, 90deg);
       }
       &::-ms-placeholder {
-        color: transparent;
+        color: transparent !important;
+        opacity: 0;
+        transform: rotate3d(1, 0, 0, 90deg);
+      }
+      &::placeholder {
+        color: transparent !important;
+        opacity: 0;
         transform: rotate3d(1, 0, 0, 90deg);
       }
     }
@@ -189,6 +197,13 @@ input {
     font-weight: $font-weight-light;
     transition: $transition-base;
   }
+  &::placeholder {
+    color: $input-placeholder-color;
+    font-family: $input-placeholder-font;
+    font-size: $input-placeholder-size;
+    font-weight: $font-weight-light;
+    transition: $transition-base;
+  }
 }
 
 button {
@@ -206,15 +221,23 @@ textarea {
     background: none;
 
     &::-webkit-input-placeholder {
-      color: transparent;
+      color: transparent !important;
+      opacity: 0;
       transform: rotate3d(1, 0, 0, 90deg);
     }
     &::-moz-placeholder {
-      color: transparent;
+      color: transparent !important;
+      opacity: 0;
       transform: rotate3d(1, 0, 0, 90deg);
     }
     &::-ms-placeholder {
-      color: transparent;
+      color: transparent !important;
+      opacity: 0;
+      transform: rotate3d(1, 0, 0, 90deg);
+    }
+    &::placeholder {
+      color: transparent !important;
+      opacity: 0;
       transform: rotate3d(1, 0, 0, 90deg);
     }
   }
