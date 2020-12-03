@@ -14,8 +14,6 @@ function headerPosition() {
     let offsetY = window.pageYOffset;
     let header = document.querySelector('header.header');
 
-    console.log(header);
-
     if (offsetY > 0) {
         header.classList.add('offset-y');
     }
