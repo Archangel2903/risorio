@@ -297,3 +297,36 @@ a.btn {
     height: 17px;
   }
 }
+
+.pagination {
+  display: block;
+  margin: 0 0 75px;
+  text-align: center;
+
+  &__arrow {
+    svg {
+      width: 20px;
+      height: 15px;
+      fill: $main-first-color;
+    }
+    &:first-child {
+      svg {
+        transform: rotate3d(0, 1, 0, 180deg);
+      }
+    }
+    &_disabled {
+      opacity: .4;
+    }
+  }
+
+  &__pages {
+    margin: 0 35px;
+    color: $text-color;
+    font-size: 24px;
+    font-weight: bold;
+    vertical-align: middle;
+    &-current {
+      color: $main-first-color;
+    }
+  }
+}

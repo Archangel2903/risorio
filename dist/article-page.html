@@ -56,7 +56,7 @@
                         </div>
 
                         <div class="col-3">
-                            <a href="#callback" class="callback">заказать звонок</a>
+                            <button class="callback btn btn-light">заказать звонок</button>
                         </div>
                     </div>
                 </div>
@@ -64,16 +64,24 @@
                 <div class="col-11 header-form-wrap d-none py-1">
                     <form action="" class="form-inline header-form">
                         <div class="form-group">
-                            <svg><use xlink:href="img/spritemap.svg#sprite-phone"></use></svg>
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-phone"></use>
+                            </svg>
                             <input type="tel" class="header-form__input mask-phone form-control" placeholder="Ваш телефон">
                         </div>
 
                         <div class="form-group">
-                            <svg><use xlink:href="img/spritemap.svg#sprite-user"></use></svg>
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-user"></use>
+                            </svg>
                             <input type="text" class="header-form__input form-control" placeholder="Ваше имя">
                         </div>
 
-                        <button type="submit" class="header-form__submit btn btn-light">Заказать <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></button>
+                        <button type="submit" class="header-form__submit btn btn-light">Заказать
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-arrow"></use>
+                            </svg>
+                        </button>
 
                         <button class="header-form__close callback-close">закрыть</button>
                     </form>
@@ -110,7 +118,7 @@
             </div>
         </div>
 
-        <div class="section head-section section-cart">
+        <div class="section head-section section-blog-article">
             <picture class="head-decorator">
                 <img src="img/section-head.png" alt="">
             </picture>
@@ -118,21 +126,30 @@
                 <img src="img/section-head-bg.png" alt="">
             </picture>
             <picture class="title-logo">
-                <img src="img/cart-logo-title.png" alt="">
+                <img src="img/blog-logo-title.png" alt="blog-title">
             </picture>
 
             <div class="container">
                 <div class="row">
-                    <div class="col-6 offset-3 empty-cart">
-                        <svg class="empty-cart__bg-ico">
-                            <use xlink:href="img/spritemap.svg#sprite-cart"></use>
-                        </svg>
-                        <p class="empty-cart__title title">
-                            <span>Ваша корзина</span>
-                            <span>Пуста</span>
-                        </p>
-                        <a href="#zakaz" class="empty-cart__order-link d-flex mx-auto btn btn-primary">Заказать тейпы</a>
-                        <a href="index.html" class="to-main d-block text-center"><svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg> Вернуться на главную</a>
+                    <div class="col-12 article">
+                        <div class="article__content clearfix">
+                            <picture class="article__pic">
+                                <img src="img/blog-01.png" alt="article-photo">
+                            </picture>
+
+                            <p class="article__title">Из первых рук:
+                                Личные блоги разработчиков косметики.</p>
+                            <p class="article__text">
+                                <span><b>Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять заметных ... проектов: The Beauty Brains, Chemists Corner, Beauty by the Geeks, Susan Chyi Blog и Colin's Beauty Pages, и разобрались, что из них можно узнать.</b></span>
+                                <span>Основательница марок декоративной и не только косметики Jelly Pong Pong (упаковка и наполнение под стать названию) и So Susan еще студенткой решила попробовать себя в бизнесе и с тех пор не может остановиться. В блоге Сюзан отвечает на неглупые вопросы читателей вроде «Как протестировать косметику в домашних условиях?», много пишет о работе (рассказ о том, как сложно сделать масло для лица, — тут) и немного — о своей жизни. Делает это, правда, нечасто</span>
+                                <span>Основательница марок декоративной и не только косметики Jelly Pong Pong (упаковка и наполнение под стать названию) и So Susan еще студенткой решила попробовать себя в бизнесе и с тех пор не может остановиться. В блоге Сюзан отвечает на неглупые вопросы читателей вроде «Как протестировать косметику в домашних условиях?», много пишет о работе (рассказ о том, как сложно сделать масло для лица, — тут) и немного — о своей жизни. Делает это, правда, нечасто.</span>
+                            </p>
+                        </div>
+
+                        <div class="article__rating">
+                            <p class="article__rating-title">ОЦЕНИТЬ СТАТЬЮ</p>
+                            <input type="text" class="article__rating-input rating-input" value="3">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,6 +157,44 @@
                 <svg>
                     <use xlink:href="img/spritemap.svg#sprite-separator"></use>
                 </svg>
+            </div>
+        </div>
+
+        <div class="section section-blog">
+            <div class="container">
+                <div class="row blog">
+                    <div class="blog__box col-6">
+                        <picture><img src="img/default.svg" data-src="img/blog-01.png" alt="blog-photo"></picture>
+
+                        <div class="blog__content">
+                            <p class="blog__content-title">Из первых рук: Личные блоги разработчиков косметики</p>
+                            <p class="blog__content-text">Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять</p>
+                            <a href="#article-page" class="blog__content-more">подробнее <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
+
+                            <div class="blog__content-separator">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog__box col-6">
+                        <picture><img src="img/default.svg" data-src="img/blog-02.png" alt="blog-photo"></picture>
+
+                        <div class="blog__content">
+                            <p class="blog__content-title">Из первых рук: Личные блоги разработчиков косметики</p>
+                            <p class="blog__content-text">Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять заметных проектов: The Beauty Brains, Chemists Corner, Beauty by the Geeks, Susan Chyi Blog и Colin's Beauty Pages, и разобрались, что из них можно узнать.</p>
+                            <a href="#article-page" class="blog__content-more">подробнее <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
+
+                            <div class="blog__content-separator">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -179,7 +234,7 @@
                             <span>8 (495) 789-56-86</span>
                         </a>
 
-                        <a href="#callback" class="ml-5 callback">заказать звонок</a>
+                        <button class="ml-5 callback btn btn-light">заказать звонок</a>
                     </div>
 
                     <div class="main-menu justify-content-start">

@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Главная</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.e25f876024584358d29c.min.css" rel="stylesheet"></head>
+</head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -19,7 +19,7 @@
                             <use xlink:href="img/spritemap.svg#sprite-logo"></use>
                         </svg>
                         <!--<picture>
-                            <img src="img/image.jpg" data-src="img/logo.png" alt="">
+                            <img src="<%= require('./img/image.jpg') %>" data-src="<%= require('./img/logo.png') %>" alt="">
                         </picture>-->
                     </a>
                 </div>
@@ -96,7 +96,7 @@
         <div class="section section-banner">
             <div class="section-bg">
                 <picture class="section-banner__pic">
-                    <img src="img/banner.jpg" class="section-banner__img" alt="">
+                    <img src="<%= require('./img/banner.jpg') %>" class="section-banner__img" alt="">
                 </picture>
             </div>
 
@@ -107,7 +107,7 @@
                             <div class="sale-box">
                                 <span class="sale-box__old-price" data-percent="30">342 <span class="rub">руб.</span></span>
                                 <button class="sale-box__button button-inline btn btn-primary">
-                                    <span class="sale-box__button-label"><img src="img/button-label-stock.png" alt=""> 239<span class="rub">руб.</span></span>
+                                    <span class="sale-box__button-label"><img src="<%= require('./img/button-label-stock.png') %>" alt=""> 239<span class="rub">руб.</span></span>
                                     купить сейчас
                                     <span class="sale-box__button-itext">Цена заказа по акции</span>
                                 </button>
@@ -118,162 +118,82 @@
             </div>
         </div>
 
-        <div class="section head-section section-blog">
+        <div class="section head-section section-blog-article">
             <picture class="head-decorator">
-                <img src="img/section-head.png" alt="">
+                <img src="<%= require('./img/section-head.png') %>" alt="">
             </picture>
             <picture class="head-decorator head-decorator-bg">
-                <img src="img/section-head-bg.png" alt="">
+                <img src="<%= require('./img/section-head-bg.png') %>" alt="">
             </picture>
             <picture class="title-logo">
-                <img src="img/blog-logo-title.png" alt="blog-title">
+                <img src="<%= require('./img/blog-logo-title.png') %>" alt="blog-title">
             </picture>
 
             <div class="container">
-                <div class="row blog">
-                    <div class="blog__box col-6">
-                        <picture><img src="img/default.svg" data-src="img/blog-01.png" alt="blog-photo"></picture>
+                <div class="row">
+                    <div class="col-12 article">
+                        <div class="article__content clearfix">
+                            <picture class="article__pic">
+                                <img src="<%= require('./img/blog-01.png') %>" alt="article-photo">
+                            </picture>
 
-                        <div class="blog__content">
-                            <p class="blog__content-title">Из первых рук: Личные блоги разработчиков косметики</p>
-                            <p class="blog__content-text">Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять</p>
-                            <a href="#article-page" class="blog__content-more">подробнее <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
-
-                            <div class="blog__content-separator">
-                                <svg>
-                                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
-                                </svg>
-                            </div>
+                            <p class="article__title">Из первых рук:
+                                Личные блоги разработчиков косметики.</p>
+                            <p class="article__text">
+                                <span><b>Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять заметных ... проектов: The Beauty Brains, Chemists Corner, Beauty by the Geeks, Susan Chyi Blog и Colin's Beauty Pages, и разобрались, что из них можно узнать.</b></span>
+                                <span>Основательница марок декоративной и не только косметики Jelly Pong Pong (упаковка и наполнение под стать названию) и So Susan еще студенткой решила попробовать себя в бизнесе и с тех пор не может остановиться. В блоге Сюзан отвечает на неглупые вопросы читателей вроде «Как протестировать косметику в домашних условиях?», много пишет о работе (рассказ о том, как сложно сделать масло для лица, — тут) и немного — о своей жизни. Делает это, правда, нечасто</span>
+                                <span>Основательница марок декоративной и не только косметики Jelly Pong Pong (упаковка и наполнение под стать названию) и So Susan еще студенткой решила попробовать себя в бизнесе и с тех пор не может остановиться. В блоге Сюзан отвечает на неглупые вопросы читателей вроде «Как протестировать косметику в домашних условиях?», много пишет о работе (рассказ о том, как сложно сделать масло для лица, — тут) и немного — о своей жизни. Делает это, правда, нечасто.</span>
+                            </p>
                         </div>
-                    </div>
 
-                    <div class="blog__box col-6">
-                        <picture><img src="img/default.svg" data-src="img/blog-02.png" alt="blog-photo"></picture>
-
-                        <div class="blog__content">
-                            <p class="blog__content-title">Из первых рук: Личные блоги разработчиков косметики</p>
-                            <p class="blog__content-text">Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять заметных проектов: The Beauty Brains, Chemists Corner, Beauty by the Geeks, Susan Chyi Blog и Colin's Beauty Pages, и разобрались, что из них можно узнать.</p>
-                            <a href="#article-page" class="blog__content-more">подробнее <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
-
-                            <div class="blog__content-separator">
-                                <svg>
-                                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="blog__box col-6">
-                        <picture><img src="img/default.svg" data-src="img/blog-02.png" alt="blog-photo"></picture>
-
-                        <div class="blog__content">
-                            <p class="blog__content-title">Из первых рук: Личные блоги разработчиков косметики</p>
-                            <p class="blog__content-text">Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять заметных проектов: The Beauty Brains, Chemists Corner, Beauty by the Geeks, Susan Chyi Blog и Colin's Beauty Pages, и разобрались, что из них можно узнать.</p>
-                            <a href="#article-page" class="blog__content-more">подробнее <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
-
-                            <div class="blog__content-separator">
-                                <svg>
-                                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="blog__box col-6">
-                        <picture><img src="img/default.svg" data-src="img/blog-01.png" alt="blog-photo"></picture>
-
-                        <div class="blog__content">
-                            <p class="blog__content-title">Из первых рук: Личные блоги разработчиков косметики</p>
-                            <p class="blog__content-text">Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять</p>
-                            <a href="#article-page" class="blog__content-more">подробнее <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
-
-                            <div class="blog__content-separator">
-                                <svg>
-                                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="blog__box col-6">
-                        <picture><img src="img/default.svg" data-src="img/blog-01.png" alt="blog-photo"></picture>
-
-                        <div class="blog__content">
-                            <p class="blog__content-title">Из первых рук: Личные блоги разработчиков косметики</p>
-                            <p class="blog__content-text">Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять</p>
-                            <a href="#article-page" class="blog__content-more">подробнее <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
-
-                            <div class="blog__content-separator">
-                                <svg>
-                                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="blog__box col-6">
-                        <picture><img src="img/default.svg" data-src="img/blog-02.png" alt="blog-photo"></picture>
-
-                        <div class="blog__content">
-                            <p class="blog__content-title">Из первых рук: Личные блоги разработчиков косметики</p>
-                            <p class="blog__content-text">Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять заметных проектов: The Beauty Brains, Chemists Corner, Beauty by the Geeks, Susan Chyi Blog и Colin's Beauty Pages, и разобрались, что из них можно узнать.</p>
-                            <a href="#article-page" class="blog__content-more">подробнее <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
-
-                            <div class="blog__content-separator">
-                                <svg>
-                                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="blog__box col-6">
-                        <picture><img src="img/default.svg" data-src="img/blog-02.png" alt="blog-photo"></picture>
-
-                        <div class="blog__content">
-                            <p class="blog__content-title">Из первых рук: Личные блоги разработчиков косметики</p>
-                            <p class="blog__content-text">Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять заметных проектов: The Beauty Brains, Chemists Corner, Beauty by the Geeks, Susan Chyi Blog и Colin's Beauty Pages, и разобрались, что из них можно узнать.</p>
-                            <a href="#article-page" class="blog__content-more">подробнее <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
-
-                            <div class="blog__content-separator">
-                                <svg>
-                                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="blog__box col-6">
-                        <picture><img src="img/default.svg" data-src="img/blog-01.png" alt="blog-photo"></picture>
-
-                        <div class="blog__content">
-                            <p class="blog__content-title">Из первых рук: Личные блоги разработчиков косметики</p>
-                            <p class="blog__content-text">Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять</p>
-                            <a href="#article-page" class="blog__content-more">подробнее <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
-
-                            <div class="blog__content-separator">
-                                <svg>
-                                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
-                                </svg>
-                            </div>
+                        <div class="article__rating">
+                            <p class="article__rating-title">ОЦЕНИТЬ СТАТЬЮ</p>
+                            <input type="text" class="article__rating-input rating-input" value="3">
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="section-separator">
+                <svg>
+                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
+                </svg>
+            </div>
+        </div>
 
-                <div class="pagination">
-                    <span class="pagination__arrow pagination__arrow_disabled">
-                        <svg>
-                            <use xlink:href="img/spritemap.svg#sprite-arrow"></use>
-                        </svg>
-                    </span>
+        <div class="section section-blog">
+            <div class="container">
+                <div class="row blog">
+                    <div class="blog__box col-6">
+                        <picture><img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-01.png') %>" alt="blog-photo"></picture>
 
-                    <span class="pagination__pages"><span class="pagination__pages-current">1</span>/23</span>
+                        <div class="blog__content">
+                            <p class="blog__content-title">Из первых рук: Личные блоги разработчиков косметики</p>
+                            <p class="blog__content-text">Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять</p>
+                            <a href="#article-page" class="blog__content-more">подробнее <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
 
-                    <a href="#next-page" class="pagination__arrow">
-                        <svg>
-                            <use xlink:href="img/spritemap.svg#sprite-arrow"></use>
-                        </svg>
-                    </a>
+                            <div class="blog__content-separator">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog__box col-6">
+                        <picture><img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-02.png') %>" alt="blog-photo"></picture>
+
+                        <div class="blog__content">
+                            <p class="blog__content-title">Из первых рук: Личные блоги разработчиков косметики</p>
+                            <p class="blog__content-text">Блоги производителей косметики и ученых читать вдвойне интересно: во-первых, из-за личного опыта предпринимателей, во-вторых, из-за инсайдов. Мы нашли пять заметных проектов: The Beauty Brains, Chemists Corner, Beauty by the Geeks, Susan Chyi Blog и Colin's Beauty Pages, и разобрались, что из них можно узнать.</p>
+                            <a href="#article-page" class="blog__content-more">подробнее <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></a>
+
+                            <div class="blog__content-separator">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -283,10 +203,10 @@
     <!-- FOOTER -->
     <footer class="footer">
         <picture class="head-decorator">
-            <img src="img/footer-head.png" alt="">
+            <img src="<%= require('./img/footer-head.png') %>" alt="">
         </picture>
         <picture class="footer-decorator">
-            <img src="img/default.svg" data-src="img/leaf-footer.png" alt="">
+            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/leaf-footer.png') %>" alt="">
         </picture>
 
         <a href="index.html" class="footer__logo">
@@ -337,8 +257,8 @@
 </div>
 
 <div class="icon-load">
-    <picture><img src="img/loader.svg" alt="pre-loader"></picture>
+    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.e25f876024584358d29c.min.js"></script></body>
+</body>
 </html>
