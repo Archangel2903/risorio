@@ -226,10 +226,14 @@ a.btn {
   height: 80px;
   border: none !important;
   border-radius: 1000px;
-  padding-left: 90px;
+  //padding-left: 90px;
   outline: none !important;
-  background: #faf5f3 !important;
+  background: #f8eae5 !important;
   box-shadow: none !important;
+}
+
+[class*="ico"] + .form-control {
+  padding-left: 90px;
 }
 
 .rub {
@@ -328,5 +332,98 @@ a.btn {
     &-current {
       color: $main-first-color;
     }
+  }
+}
+
+.select-list {
+  &+ .select2 {
+    .select2 {
+      &-selection {
+        height: 72px;
+        border: none;
+        border-radius: 35px;
+        background: $main-first-color;
+
+        &__rendered {
+          padding: 23px 60px 23px 68px;
+          color: $main-third-color;
+          font-family: "Montserrat Alternates", "Arial", sans-serif;
+          font-size: 15px;
+          line-height: 26px;
+        }
+
+        &__placeholder {
+          color: $main-third-color;
+          text-transform: uppercase;
+        }
+
+        &__arrow {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          width: auto;
+          height: auto;
+          transform: translate(-50%, -50%);
+
+          b {
+            position: static;
+            display: inline-block;
+            margin: 0;
+            border: none;
+            border-top: 11px solid $main-third-color !important;
+            border-left: 12px solid transparent !important;
+            border-right: 12px solid transparent !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.select2-container.select2-container--open .select2-selection__arrow b {
+  margin: 0;
+  border: none;
+  border-top: 11px solid $main-third-color !important;
+  border-left: 12px solid transparent !important;
+  border-right: 12px solid transparent !important;
+  transform: rotate3d(1, 0, 0, 180deg);
+}
+
+.select2 {
+  &-dropdown {
+    border: 1px solid $main-first-color;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &-results {
+    &__options {
+      margin: 0;
+      background: $main-third-color;
+    }
+
+    &__option {
+      &--highlighted {
+        background: $main-first-color !important;
+        color: $main-third-color !important;
+      }
+    }
+  }
+}
+
+input[type="radio"] {
+  display: none !important;
+
+  &+ .pseudo-radio {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 3px solid $main-first-color;
+    border-radius: 100%;
+    background: #faf5f3;
+    @include transition();
+  }
+  &:checked + .pseudo-radio {
+    background: $main-first-color;
   }
 }

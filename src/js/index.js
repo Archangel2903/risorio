@@ -9,6 +9,7 @@ import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
 import noUiSlider from 'nouislider';
 import IMask from 'imask';
+import 'select2';
 
 function headerPosition() {
     let offsetY = window.pageYOffset;
@@ -159,7 +160,7 @@ $(function () {
         };
     });
 
-    // star rating
+    // Star rating
     let rateInput = document.querySelectorAll('.rating-input');
     rateInput.forEach(function (input) {
         if (input.classList.contains('rating-read')) {
@@ -184,6 +185,59 @@ $(function () {
                 emptyStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#936f62" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
                 filledStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#317b0c" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
             });
+        }
+    });
+
+    // Select2
+    $('.select-list').select2({
+        minimumResultsForSearch: Infinity,
+    });
+
+    $('.checkout__fields-select').on('select2:select', function (e) {
+        let data = e.params.data.text;
+        $(this).nextAll('.checkout__fields-select-address').text(data);
+    });
+
+    if ($('.checkout__delivery-radio').length) {
+        $('.checkout__delivery-radio').on('click', function () {
+            if ($(this).data('method') === 'postmat') {
+                $('.checkout__fields-box_addresses').removeClass('d-none');
+                $('.checkout__fields-box_address').addClass('d-none');
+            }
+            else {
+                $('.checkout__fields-box_addresses').addClass('d-none');
+                $('.checkout__fields-box_address').removeClass('d-none');
+            }
+        });
+    }
+
+    if ($('.checkout__order-quantity').length) {
+        $('.checkout__order-quantity-arrow').on('click', function () {
+            let quantityInput = $('.checkout__order-quantity-input');
+            let inputVal = quantityInput.val();
+
+            if ($(this).hasClass('quantity-plus')) {
+                quantityInput.val(++inputVal);
+            }
+            else if ($(this).hasClass('quantity-minus')) {
+                if (inputVal > 1) {
+                    quantityInput.val(--inputVal);
+                }
+            }
+            else {
+                return false;
+            }
+        });
+    }
+
+    $('.checkout__order-pay-input').on('click', function () {
+        if (!$(this).hasClass('pay-delivery')) {
+            if ($(this).data('method') === 'on-delivery') {
+                $('.checkout__order-pay-delivery').slideDown();
+            }
+            else {
+                $('.checkout__order-pay-delivery').slideUp();
+            }
         }
     });
 

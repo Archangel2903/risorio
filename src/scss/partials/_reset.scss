@@ -128,7 +128,7 @@ input {
 
   &[type="text"], &[type="email"], &[type="password"], &[type="number"], &[type="tel"], &[type="search"], &[type="datetime"], &[type="url"] {
     cursor: auto;
-    padding: 0 5px;
+    //padding: 0 5px;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
     color: $text-color;
@@ -211,7 +211,7 @@ button {
 }
 
 textarea {
-  padding: 0 5px;
+  //padding: 0 5px;
   color: $text-color;
   font-family: $font-family-custom;
   font-size: 15px;
