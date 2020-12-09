@@ -40,16 +40,35 @@ footer.footer {
   }
 
   .main-menu {
-    position: static;
+    position: relative;
     flex-direction: column;
     align-items: center;
+    max-width: none;
 
     &__list {
       flex-direction: column;
+      align-items: flex-start;
+      align-content: center;
+      position: relative;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      opacity: 1;
+      visibility: visible;
+      background: none;
+      z-index: 0;
     }
     &__link {
       margin: 0 0 40px 0;
     }
+  }
+
+  .callback {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: translate(0);
   }
 }
 
@@ -68,9 +87,6 @@ footer.footer {
     .footer {
       &-decorator {
         bottom: -40%;
-      }
-      &__logo {
-        margin: -90px auto 20px;
       }
     }
   }
@@ -103,6 +119,9 @@ footer.footer {
         top: -100%;
         right: -250px;
         bottom: auto;
+      }
+      &__logo {
+        margin: -90px auto 20px;
       }
     }
 

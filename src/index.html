@@ -24,11 +24,11 @@
                     </a>
                 </div>
 
-                <div class="col-11 header-content-wrap">
+                <div class="col-lg-11 header-content-wrap">
                     <div class="row">
-                        <div class="col-9 d-flex flex-wrap flex-column justify-content-around order-2 order-lg-1">
-                            <div class="contacts justify-content-end">
-                                <a href="https://www.instagram.com/" class="contacts__link" target="_blank">
+                        <div class="header-content-wrap__col col-lg-9 d-flex flex-wrap flex-column justify-content-around ">
+                            <div class="contacts justify-content-lg-end">
+                                <a href="https://www.instagram.com/" class="contacts__link d-none d-sm-inline-block" target="_blank">
                                 <span class="contacts__ico">
                                     <svg>
                                         <use xlink:href="img/spritemap.svg#sprite-instagram"></use>
@@ -37,7 +37,7 @@
                                 </a>
 
                                 <a href="tel:84957895686" class="contacts__link">
-                            <span class="contacts__ico">
+                            <span class="contacts__ico d-none d-sm-inline-block">
                                 <svg><use xlink:href="img/spritemap.svg#sprite-phone"></use></svg>
                             </span>
                                     <span>8 (495) 789-56-86</span>
@@ -45,7 +45,9 @@
                             </div>
 
                             <div class="main-menu justify-content-end">
-                                <button class="main-menu__switch"></button>
+                                <button class="main-menu__switch">
+                                    <span class="main-menu__switch-line"></span>
+                                </button>
                                 <nav class="main-menu__list">
                                     <a href="#about" class="main-menu__link">О продукте</a>
                                     <a href="#types" class="main-menu__link">Что ты получишь</a>
@@ -55,13 +57,13 @@
                             </div>
                         </div>
 
-                        <div class="col-3 order-1 order-lg-2">
+                        <div class="col-lg-3 order-1 order-lg-2">
                             <button class="callback btn btn-light">заказать звонок</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-11 header-form-wrap d-none py-1">
+                <div class="col-lg-11 header-form-wrap d-none py-1">
                     <form action="" class="form-inline header-form">
                         <div class="form-group">
                             <svg><use xlink:href="img/spritemap.svg#sprite-phone"></use></svg>
@@ -75,7 +77,7 @@
 
                         <button type="submit" class="header-form__submit btn btn-light">Заказать <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></button>
 
-                        <button class="header-form__close callback-close">закрыть</button>
+                        <button type="button" class="header-form__close callback-close">закрыть</button>
                     </form>
                 </div>
             </div>
@@ -97,13 +99,13 @@
 
             <div class="container main-banner-container">
                 <div class="row">
-                    <div class="col-md-4 offset-md-1 pl-md-0">
+                    <div class="col-xl-4 col-lg-6 offset-xl-1 pl-lg-0">
                         <div class="banner-content ml-md-5">
-                            <p class="banner-content__text">
+                            <p class="banner-content__text order-2 order-lg-1">
                                 <span>Косметические тейпы от морщин для домашнего применения.</span>
                                 Простой и безопасный способ сохранить молодость лица.
                             </p>
-                            <div class="sale-box">
+                            <div class="sale-box order-1 order-lg-2">
                                 <span class="sale-box__old-price" data-percent="30">342 <span class="rub">руб.</span></span>
                                 <button class="sale-box__button btn btn-primary">
                                     <span class="sale-box__button-label"><img src="<%= require('./img/button-label-stock.png') %>" alt=""> 239<span class="rub">руб.</span></span>

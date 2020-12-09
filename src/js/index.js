@@ -40,7 +40,10 @@ document.addEventListener('scroll', headerPosition, {passive: true});
 
 $(function () {
     // Mobile menu
-
+    $('.main-menu__switch').on('click', function () {
+        $(this).toggleClass('active');
+        $(this).next().toggleClass('active');
+    });
 
     // Callback
     $('.callback').on('click', function () {
