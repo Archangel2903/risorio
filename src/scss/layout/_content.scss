@@ -193,6 +193,7 @@
   top: -223px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
   img {
 
   }
@@ -786,19 +787,19 @@
 
 /* BLOG */
 .blog {
-  margin: 70px 0 75px;
+  margin: 70px 0 40px;
 
   &__box {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
     margin: 0 0 40px;
 
     picture {
       position: relative;
-      margin: 20px 24px 0 0;
+      margin: 0 auto 28px;
 
       &:after {
         content: '';
@@ -816,7 +817,6 @@
     img {
       width: 198px;
       height: 198px;
-      //margin: 11px;
       border-radius: 100%;
       overflow: hidden;
       box-shadow: 0 0 0 11px #f8eae5;
@@ -865,14 +865,14 @@
       }
     }
     &-text {
-      max-height: 130px;
+      max-height: 120px;
       margin: 0;
       overflow: hidden;
       color: $text-color;
       font-family: $font-family-custom;
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 300;
-      line-height: 26px;
+      line-height: 20px;
     }
     &-more {
       display: inline-block;
@@ -923,9 +923,10 @@
 
 .article {
   &__pic {
-    display: inline-block;
-    margin: 11px 25px 0 0;
-    float: left;
+    display: block;
+    width: 198px;
+    margin: 0 auto 28px;
+    float: none;
 
     img {
       width: 198px;
@@ -940,17 +941,16 @@
   &__title {
     margin: 0 0 24px;
     color: $main-first-color;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: bold;
-    line-height: 40px;
-    white-space: pre-line;
+    line-height: 26px;
   }
 
   &__text {
     margin: 0 0 38px;
     color: $text-color;
-    font-size: 15px;
-    line-height: 26px;
+    font-size: 13px;
+    line-height: 20px;
     span {
       display: block;
       &:not(:last-child) {
@@ -1388,7 +1388,7 @@
   }
 
   &__title {
-    margin: 10px 5% 50px;
+    margin: 10px auto 50px;
     line-height: 0.4;
 
     &:before {
@@ -1436,11 +1436,10 @@
   z-index: 0;
 
   &__error {
-    margin-bottom: 45px;
+    margin: 50px auto;
     color: #faf5f3;
-    font-size: 320px;
+    font-size: 170px;
     font-weight: bold;
-    line-height: 240px;
   }
 
   &__title {
@@ -1452,11 +1451,11 @@
     span {
       &:nth-of-type(1) {
         margin-right: 20px;
-        font-size: 24px;
+        font-size: 20px;
         text-transform: uppercase;
       }
       &:nth-of-type(2) {
-        font-size: 64px;
+        font-size: 53px;
       }
     }
   }
