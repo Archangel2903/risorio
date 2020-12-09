@@ -13,7 +13,7 @@
     <header class="header position-fixed">
         <div class="container">
             <div class="row">
-                <div class="col-1">
+                <div class="col-lg-1 col-4">
                     <a href="index.html" class="logo">
                         <svg>
                             <use xlink:href="img/spritemap.svg#sprite-logo"></use>
@@ -26,7 +26,7 @@
 
                 <div class="col-11 header-content-wrap">
                     <div class="row">
-                        <div class="col-9 d-flex flex-wrap flex-column justify-content-around">
+                        <div class="col-9 d-flex flex-wrap flex-column justify-content-around order-2 order-lg-1">
                             <div class="contacts justify-content-end">
                                 <a href="https://www.instagram.com/" class="contacts__link" target="_blank">
                                 <span class="contacts__ico">
@@ -55,7 +55,7 @@
                             </div>
                         </div>
 
-                        <div class="col-3">
+                        <div class="col-3 order-1 order-lg-2">
                             <button class="callback btn btn-light">заказать звонок</button>
                         </div>
                     </div>
@@ -89,6 +89,9 @@
             <div class="section-bg">
                 <picture class="section-banner__pic">
                     <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/main-banner.jpg') %>" class="section-banner__img" alt="">
+                </picture>
+                <picture class="section-banner__pic section-banner__pic_mobile">
+                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/main-banner_mob.jpg') %>" class="section-banner__img" alt="">
                 </picture>
             </div>
 
@@ -125,8 +128,8 @@
             </picture>
 
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-5 offset-1">
+                <div class="row align-items-xl-center">
+                    <div class="col-lg-5 offset-xl-1 order-lg-1 order-2">
                         <div class="about-company">
                             <div class="about-company__box">
                                 <p class="about-company__title title-text">О компании</p>
@@ -143,7 +146,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-lg-6 order-lg-2 order-1">
                         <div class="about-company">
                             <picture class="about-company__pic">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/certificate.png') %>" class="about-company__image" alt="">
@@ -162,14 +165,14 @@
         <div class="section section-types">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-6">
+                    <div class="col-lg-6">
                         <div class="about-types">
                             <picture class="about-types__pic">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/types-structure.png') %>" alt="">
                             </picture>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6">
                         <div class="about-types">
                             <ul class="about-types__list">
                                 <li class="about-types__li">Основа тейпов выполнена из ультра-тонкого  органического эко-хлопка, не вызывающего  раздражения и аллергических реакций</li>
@@ -207,7 +210,7 @@
                 </div>
 
                 <div class="row align-items-center">
-                    <div class="col-5">
+                    <div class="col-lg-5 order-lg-1 order-2">
                         <div class="reasons">
                             <div class="reasons__box">
                                 <p>Гладкий лоб</p>
@@ -235,8 +238,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-5 offset-2">
-                        <div class="reasons text-right">
+                    <div class="col-lg-5 offset-lg-1 offset-xl-2 order-lg-2 order-1">
+                        <div class="reasons">
                             <picture class="reasons__pic">
                                 <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/model-img.png') %>" alt="">
                             </picture>
@@ -267,7 +270,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-3 to-bottom text-right">
+                            <div class="col-lg-3 to-bottom text-lg-right">
                                 <div class="about-lifting">
                                     <div class="about-lifting__box">
                                         <p class="about-lifting__box-title"><span class="about-lifting__box-ico ico-right"><svg><use xlink:href="img/spritemap.svg#sprite-lifting-1"></use></svg></span>Удобство</p>
@@ -275,7 +278,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 px-5 text-center">
+                            <div class="col-lg-6 px-lg-5 text-lg-center">
                                 <div class="about-lifting">
                                     <div class="about-lifting__box h-auto">
                                         <p class="about-lifting__box-title"><span class="about-lifting__box-ico ico-bottom"><svg><use xlink:href="img/spritemap.svg#sprite-lifting-2"></use></svg></span>Экономия времени</p>
@@ -283,7 +286,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3 to-bottom">
+                            <div class="col-lg-3 to-bottom">
                                 <div class="about-lifting">
                                     <div class="about-lifting__box">
                                         <p class="about-lifting__box-title"><span class="about-lifting__box-ico ico-left"><svg><use xlink:href="img/spritemap.svg#sprite-lifting-3"></use></svg></span>Эффективность</p>
@@ -293,24 +296,26 @@
                             </div>
                         </div>
 
-                        <div class="row mb-5 pb-5 text-center to-center">
-                            <div class="col-6 offset-md-3">
-                                <picture>
-                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="">
-                                </picture>
+                        <div class="row mb-lg-5 pb-lg-5 text-center to-center">
+                            <div class="col-lg-6 offset-lg-3">
+                                <div class="about-lifting">
+                                    <picture class="about-lifting__pic">
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="">
+                                    </picture>
 
-                                <div class="sale-box">
-                                    <a href="#" class="sale-box__button btn btn-primary">
-                                        <span class="sale-box__button-label"><img src="<%= require('./img/button-label.png') %>" alt=""> 239<span class="rub">руб.</span></span>
-                                        получить
-                                        <span class="sale-box__button-itext">по акционной цене</span>
-                                    </a>
+                                    <div class="sale-box">
+                                        <a href="#" class="sale-box__button btn btn-primary">
+                                            <span class="sale-box__button-label"><img src="<%= require('./img/button-label.png') %>" alt=""> 239<span class="rub">руб.</span></span>
+                                            получить
+                                            <span class="sale-box__button-itext">по акционной цене</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-3 to-top text-right">
+                            <div class="col-lg-3 to-top text-lg-right">
                                 <div class="about-lifting">
                                     <div class="about-lifting__box">
                                         <p class="about-lifting__box-title"><span class="about-lifting__box-ico ico-right"><svg><use xlink:href="img/spritemap.svg#sprite-lifting-4"></use></svg></span>Безопасность</p>
@@ -318,7 +323,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 mt-5 px-5 text-center">
+                            <div class="col-lg-6 mt-lg-5 px-lg-5 text-lg-center">
                                 <div class="about-lifting">
                                     <div class="about-lifting__box">
                                         <p class="about-lifting__box-title"><span class="about-lifting__box-ico ico-top"><svg><use xlink:href="img/spritemap.svg#sprite-lifting-5"></use></svg></span>Натуральность</p>
@@ -326,7 +331,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3 to-top">
+                            <div class="col-lg-3 to-top">
                                 <div class="about-lifting">
                                     <div class="about-lifting__box">
                                         <p class="about-lifting__box-title"><span class="about-lifting__box-ico ico-left"><svg><use xlink:href="img/spritemap.svg#sprite-lifting-6"></use></svg></span>Доступная стоимость</p>
@@ -357,11 +362,11 @@
                     </div>
                 </div>
                 <div class="compare row align-items-center">
-                    <div class="col-3">
+                    <div class="col-lg-3 d-none d-lg-block">
                         <p class="compare__text text-right">Тейпы Risorio подходят для «экстренного» омоложения и восстановления перед важным событием.</p>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-lg-6">
                         <div class="main-slider swiper-container compare__slider">
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
@@ -373,7 +378,7 @@
 
                                 <div class="swiper-slide">
                                     <picture>
-                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/compare01.png') %>" alt="example" title="example">
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/compare02.png') %>" alt="example" title="example">
                                     </picture>
                                 </div>
 
@@ -385,7 +390,7 @@
 
                                 <div class="swiper-slide">
                                     <picture>
-                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/compare01.png') %>" alt="example" title="example">
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/compare02.png') %>" alt="example" title="example">
                                     </picture>
                                 </div>
 
@@ -405,7 +410,7 @@
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-lg-3 d-none d-lg-block">
                         <p class="compare__text">Ты можешь увидеть результат уже через 40 минут применения, а использование курсами от 9 дней оказывает долгосрочный эффект.</p>
                     </div>
                 </div>
@@ -428,7 +433,7 @@
                 </div>
 
                 <div class="row review">
-                    <div class="col-4 reviews__box">
+                    <div class="col-lg-4 reviews__box">
                         <picture class="reviews__box-pic">
                             <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/review-photo01.png') %>" alt="">
                         </picture>
@@ -441,7 +446,7 @@
                         </div>
                     </div>
 
-                    <div class="col-4 reviews__box">
+                    <div class="col-lg-4 reviews__box">
                         <picture class="reviews__box-pic">
                             <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/review-photo01.png') %>" alt="">
                         </picture>
@@ -454,7 +459,7 @@
                         </div>
                     </div>
 
-                    <div class="col-4 reviews__box">
+                    <div class="col-lg-4 reviews__box">
                         <picture class="reviews__box-pic">
                             <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/review-photo01.png') %>" alt="">
                         </picture>
@@ -492,7 +497,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-5">
+                    <div class="col-lg-5 faq">
                         <div class="faq__special">
                             <div class="reviews__box">
                                 <div class="reviews__box-head">
@@ -507,7 +512,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-7">
+                    <div class="col-lg-7 faq">
                         <form action="mailto:test29031993@gmail.com" method="post" class="faq__form">
                             <p class="faq__form-title title">
                                 <span>Задать</span>

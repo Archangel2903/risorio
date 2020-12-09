@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
+    <title>Главная</title>
+</head>
+<body class="loaded">
+<!-- BODY -->
+<div class="main-wrapper">
+    <!-- HEADER -->
+    <header class="header position-fixed">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <a href="index.html" class="logo">
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-logo"></use>
+                        </svg>
+                        <!--<picture>
+                            <img src="<%= require('./img/image.jpg') %>" data-src="<%= require('./img/logo.png') %>" alt="">
+                        </picture>-->
+                    </a>
+                </div>
+
+                <div class="col-11 header-content-wrap">
+                    <div class="row">
+                        <div class="col-9 d-flex flex-wrap flex-column justify-content-around">
+                            <div class="contacts justify-content-end">
+                                <a href="https://www.instagram.com/" class="contacts__link" target="_blank">
+                                <span class="contacts__ico">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-instagram"></use>
+                                    </svg>
+                                </span>
+                                </a>
+
+                                <a href="tel:84957895686" class="contacts__link">
+                            <span class="contacts__ico">
+                                <svg><use xlink:href="img/spritemap.svg#sprite-phone"></use></svg>
+                            </span>
+                                    <span>8 (495) 789-56-86</span>
+                                </a>
+                            </div>
+
+                            <div class="main-menu justify-content-end">
+                                <button class="main-menu__switch"></button>
+                                <nav class="main-menu__list">
+                                    <a href="#about" class="main-menu__link">О продукте</a>
+                                    <a href="#types" class="main-menu__link">Что ты получишь</a>
+                                    <a href="#benefits" class="main-menu__link">Преимущества</a>
+                                    <a href="#result" class="main-menu__link">Результаты</a>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <button class="callback btn btn-light">заказать звонок</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-11 header-form-wrap d-none py-1">
+                    <form action="" class="form-inline header-form">
+                        <div class="form-group">
+                            <svg><use xlink:href="img/spritemap.svg#sprite-phone"></use></svg>
+                            <input type="tel" class="header-form__input mask-phone form-control" placeholder="Ваш телефон">
+                        </div>
+
+                        <div class="form-group">
+                            <svg><use xlink:href="img/spritemap.svg#sprite-user"></use></svg>
+                            <input type="text" class="header-form__input form-control" placeholder="Ваше имя">
+                        </div>
+
+                        <button type="submit" class="header-form__submit btn btn-light">Заказать <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></button>
+
+                        <button type="button" class="header-form__close callback-close">закрыть</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- CONTENT -->
+    <main class="content">
+        <div class="section section-banner">
+            <div class="section-bg">
+                <picture class="section-banner__pic">
+                    <img src="<%= require('./img/banner.jpg') %>" class="section-banner__img" alt="">
+                </picture>
+            </div>
+
+            <div class="container banner-container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-6">
+                        <div class="banner-content">
+                            <div class="sale-box">
+                                <span class="sale-box__old-price" data-percent="30">342 <span class="rub">руб.</span></span>
+                                <button class="sale-box__button button-inline btn btn-primary">
+                                    <span class="sale-box__button-label"><img src="<%= require('./img/button-label-stock.png') %>" alt=""> 239<span class="rub">руб.</span></span>
+                                    купить сейчас
+                                    <span class="sale-box__button-itext">Цена заказа по акции</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section head-section section-delivery">
+            <picture class="head-decorator">
+                <img src="<%= require('./img/section-head.png') %>" alt="">
+            </picture>
+            <picture class="head-decorator head-decorator-bg">
+                <img src="<%= require('./img/section-head-bg.png') %>" alt="">
+            </picture>
+            <picture class="title-logo">
+                <img src="<%= require('./img/delivery-logo-title.png') %>" alt="delivery-title">
+            </picture>
+
+            <div class="container">
+                <div class="row delivery">
+                    <div class="col-4 delivery__box text-right">
+                        <span class="delivery__box-ico">
+                            <svg><use xlink:href="img/spritemap.svg#sprite-delivery-1"></use></svg>
+                        </span>
+                        <p class="delivery__box-title">Курьерская доставка</p>
+                        <p class="delivery__box-text">Для жителей г. Москва доставка осуществляется на следующий рабочий день после оформления заказа в случае, если заказ осуществлен <b>до 16:00.</b>
+                        <span class="delivery__box-text-insight">Стоимость доставки будет рассчитана автоматически при указании адреса.</span>
+                        </p>
+                    </div>
+
+                    <div class="col-4 delivery__box text-center">
+                        <span class="delivery__box-ico">
+                            <svg><use xlink:href="img/spritemap.svg#sprite-delivery-2"></use></svg>
+                        </span>
+                        <p class="delivery__box-title">Почта России</p>
+                        <p class="delivery__box-text">
+                            <b>Доставка ФГУП «Почта России» осуществляется в соответствии с тарифами и сроками доставки Почты России. Заказ подготавливается для отправления в день осуществления заказа, либо на следующий рабочий день после совершения заказа.</b>
+                            Отправка товара ФГУП «Почта России» осуществляется только по предоплате.
+
+                            При поступлении в отделение почтовой связи по месту получения, покупателю будет направлено <b>СМС сообщение</b> о поступлении посылки в отделение почтовой связи для получения.
+
+                            <span class="delivery__box-text-insight">Получение товара через ПВЗ возможно только при предварительной оплате.</span>
+                        </p>
+                    </div>
+
+                    <div class="col-4 delivery__box">
+                        <span class="delivery__box-ico">
+                            <svg><use xlink:href="img/spritemap.svg#sprite-delivery-3"></use></svg>
+                        </span>
+                        <p class="delivery__box-title">Пункт выдачи заказов</p>
+                        <p class="delivery__box-text"><b>Для получения заказа в Пункте выдачи заказов (ПВЗ) нужно:</b></p>
+
+                        <ol class="delivery__box-text">
+                            <li>Сообщить сотруднику ПВЗ номер накладной или код PickPoint, полученный в смс-оповещении (документы, удостоверяющие личность, при получении не предоставляются).</li>
+                            <li>Если заказ не был предоплачен на сайте, произвести оплату заказа;</li>
+                            <li>Расписаться в электронном реестре при получении.</li>
+                        </ol>
+
+                        <p class="delivery__box-text">
+                            <span class="delivery__box-text-insight">Срок хранения заказа в терминале 3 календарных дня.</span>
+                            Уточнить статус заказа, продлить срок хранения заказа или запросить повторное смс-уведомление с кодом Вы можете на сайте нашего партнера PickPoint или по телефону курьерской службы <a href="tel:88007007909" class="delivery__box-text-insight">8 800 700 79 09</a>
+                            Пожалуйста, приготовьте номер заказа и номер телефона, на который он был оформлен.
+                        </p>
+                    </div>
+
+                    <div class="col-4 delivery__box">
+                        <span class="delivery__box-ico">
+                            <svg><use xlink:href="img/spritemap.svg#sprite-delivery-4"></use></svg>
+                        </span>
+                        <p class="delivery__box-title">Постамат</p>
+                        <p class="delivery__box-text">
+                            <b>Для того, чтобы воспользоваться получением заказа таким образом, вам следует:</b>
+
+                            <ol class="delivery__box-text">
+                                <li>Выбрать удобный для себя постамат при оформлении заказа на нашем сайте risorio-tape.ru;</li>
+                                <li>Получить смс-сообщение и/или e-mail с уникальным кодом для получения заказа (в момент доставления заказа в пункт выдачи заказа или постамат);</li>
+                                <li>Ввести код, полученный одним из вышеуказанных способов, в постамат и получить заказ;</li>
+                            </ol>
+                        </p>
+                    </div>
+
+                    <div class="col-12 mt-5 text-center">
+                        <a href="#zakaz" class="delivery__order btn btn-primary">Оформить доставку</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-separator">
+                <svg>
+                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="section section-payment">
+            <div class="container">
+                <div class="row">
+                    <p class="section-payment__title title">
+                        <span>Способы</span>
+                        <span>оплаты</span>
+                    </p>
+                </div>
+                <div class="row justify-content-center payment">
+                    <div class="col-4">
+                        <div class="payment__box">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pay-01"></use>
+                            </svg>
+                            <span class="payment__name">Наличными (доставка курьером)</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="payment__box">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pay-02"></use>
+                            </svg>
+                            <span class="payment__name">Банковскими картами</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="payment__box">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pay-03"></use>
+                            </svg>
+                            <span class="payment__name">Картами рассрочки Халва</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="payment__box">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pay-04"></use>
+                            </svg>
+                            <span class="payment__name">ApplePay, SamsungPay.</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="payment__box">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pay-05"></use>
+                            </svg>
+                            <span class="payment__name">Webmoney, Яндекс. Деньги, QIWI.</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="payment__box">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pay-06"></use>
+                            </svg>
+                            <span class="payment__name">В сетях обслуживания Евросеть и Связной</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="payment__box">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pay-07"></use>
+                            </svg>
+                            <span class="payment__name">Через Единый кошелек</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="payment__box">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pay-08"></use>
+                            </svg>
+                            <span class="payment__name">интернет-банкинг Альфаклик, ВТБ</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="payment__box">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pay-09"></use>
+                            </svg>
+                            <span class="payment__name">через SMS</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="payment__box">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-pay-10"></use>
+                            </svg>
+                            <span class="payment__name">интернет-банкинг Альфаклик, ВТБ</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-4 text-center">
+                        <a href="#zakaz" class="payment__order btn btn-primary">Оформить заказ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-separator">
+                <svg>
+                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
+                </svg>
+            </div>
+        </div>
+    </main>
+    <!-- CONTENT END -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <picture class="head-decorator">
+            <img src="<%= require('./img/footer-head.png') %>" alt="">
+        </picture>
+        <picture class="footer-decorator">
+            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/leaf-footer.png') %>" alt="">
+        </picture>
+
+        <a href="index.html" class="footer__logo">
+            <svg>
+                <use xlink:href="img/spritemap.svg#sprite-logo"></use>
+            </svg>
+        </a>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-11 offset-1 d-flex flex-wrap flex-column justify-content-around">
+                    <div class="contacts justify-content-start align-items-end mb-4">
+                        <a href="https://www.instagram.com/" class="contacts__link" target="_blank">
+                                <span class="contacts__ico">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-instagram"></use>
+                                    </svg>
+                                </span>
+                        </a>
+
+                        <a href="tel:84957895686" class="contacts__link">
+                            <span class="contacts__ico">
+                                <svg><use xlink:href="img/spritemap.svg#sprite-phone"></use></svg>
+                            </span>
+                            <span>8 (495) 789-56-86</span>
+                        </a>
+
+                        <button class="ml-5 callback btn btn-light">заказать звонок</a>
+                    </div>
+
+                    <div class="main-menu justify-content-start">
+                        <button class="main-menu__switch"></button>
+                        <nav class="main-menu__list">
+                            <a href="#about" class="main-menu__link">О продукте</a>
+                            <a href="#types" class="main-menu__link">Что ты получишь</a>
+                            <a href="#benefits" class="main-menu__link">Преимущества</a>
+                            <a href="#result" class="main-menu__link">Результаты</a>
+                            <a href="#policy" class="main-menu__link">пользовательское соглашение</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="copyright">все права защищены 2020</p>
+    </footer>
+    <!-- FOOTER END -->
+</div>
+
+<div class="icon-load">
+    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
+</div>
+<!-- BODY END   -->
+</body>
+</html>

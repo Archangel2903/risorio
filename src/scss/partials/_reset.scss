@@ -183,6 +183,13 @@ input {
     }
   }
 
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
   &::-moz-placeholder {
     color: $input-placeholder-color;
     font-family: $input-placeholder-font;
@@ -296,6 +303,10 @@ big {
   font-size: 125%;
 }
 
+b, strong {
+  font-weight: bold;
+}
+
 sub, sup {
   position: relative;
   font-size: 75%;
@@ -339,7 +350,11 @@ dd {
   margin: 0 0 0 40px;
 }
 
-nav ol, nav ul, ol, ul {
+ol {
+  padding-left: 15px;
+}
+
+nav ol, nav ul, ul {
   list-style: none;
 }
 

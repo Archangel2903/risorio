@@ -92,12 +92,13 @@
 
 .title {
   position: relative;
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  margin: 50px 35%;
+  max-width: 360px;
+  margin: 50px auto 20px;
   color: $title-color;
   font-size: 2.5rem;
   font-weight: $font-weight-bold;
@@ -127,20 +128,21 @@
   position: relative;
   margin: 25px 0 20px;
   color: $title-color;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 40px;
+  line-height: normal;
   z-index: 1;
   &:after {
     content: '';
     position: absolute;
-    top: -26px;
+    top: 50%;
     left: -28px;
     width: 91px;
     height: 91px;
     border-radius: 100%;
     background: #f8eae5;
-    z-index: -1;
+    transform: translateY(-50%);
+    z-index: -2;
   }
 
   & ~ * {
@@ -233,7 +235,7 @@ a.btn {
 }
 
 [class*="ico"] + .form-control {
-  padding-left: 90px;
+  padding-left: 80px;
 }
 
 .rub {
@@ -246,7 +248,7 @@ a.btn {
 
 .section-separator {
   position: relative;
-  padding: 40px 0;
+  padding: 30px 0;
 
   svg {
     display: block;
@@ -271,7 +273,7 @@ a.btn {
       &-bullet {
         width: 31px;
         height: 31px;
-        margin: 0 10px;
+        margin: 0 6px;
         color: #ffffff;
         font-size: 24px;
         background: #317b0c;
@@ -421,6 +423,7 @@ input[type="radio"] {
     border: 3px solid $main-first-color;
     border-radius: 100%;
     background: #faf5f3;
+    cursor: pointer;
     @include transition();
   }
   &:checked + .pseudo-radio {

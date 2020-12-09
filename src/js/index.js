@@ -7,7 +7,6 @@ import 'bootstrap';
 import 'bootstrap-star-rating';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
-import noUiSlider from 'nouislider';
 import IMask from 'imask';
 import 'select2';
 
@@ -40,6 +39,9 @@ $(window).on('load', function () {
 document.addEventListener('scroll', headerPosition, {passive: true});
 
 $(function () {
+    // Mobile menu
+
+
     // Callback
     $('.callback').on('click', function () {
         let content = $('.header-content-wrap');
@@ -89,115 +91,73 @@ $(function () {
         }
     }
 
-    // Range slide
-    if ($('input[type="range"]')) {
-        let sliderRange = document.querySelectorAll('.slider-range');
-        let sliderHandles = document.querySelectorAll('.slider-handles');
-
-        if (sliderRange.length) {
-            sliderRange.forEach(function (elem) {
-                let input = elem.childNodes[0];
-                let startValue = input.hasAttribute('value') ? Number(input.getAttribute('value')) : 1;
-                let minValue = input.hasAttribute('min') ? Number(input.getAttribute('min')) : 1;
-                let maxValue = input.hasAttribute('max') ? Number(input.getAttribute('max')) : 100;
-
-                input.remove();
-
-                noUiSlider.create(elem, {
-                    start: [startValue],
-                    step: 1,
-                    behavior: 'tap',
-                    connect: [true, false],
-                    range: {
-                        'min': [minValue],
-                        'max': [maxValue]
-                    }
-                });
+    // Input mask
+    if ($('.mask-phone').length) {
+        let element = document.querySelectorAll('.mask-phone');
+        element.forEach(function (e) {
+            let mask = IMask(e, {
+                mask: '{+7}(000)000-00-00',
+                lazy: false,
+                placeholderChar: '_'
             });
-        }
 
-        if (sliderHandles.length) {
-            sliderHandles.forEach(function (elem) {
-                let input = elem.childNodes[0];
-                let minValue = input.hasAttribute('min') ? Number(input.getAttribute('min')) : 1;
-                let maxValue = input.hasAttribute('max') ? Number(input.getAttribute('max')) : 100;
-
-                input.remove();
-
-                noUiSlider.create(elem, {
-                    start: [minValue, maxValue/2],
-                    step: 1,
-                    behavior: 'tap-drag',
-                    connect: true,
-                    range: {
-                        'min': minValue,
-                        'max': maxValue
-                    }
-                });
-            });
-        }
+            let placeholder = '+7(';
+            e.onfocus = function () {
+                if (this.value === placeholder || this.value === '') {
+                    this.value = placeholder
+                }
+            };
+            e.onblur = function () {
+                if (this.value === placeholder) {
+                    this.value = ''
+                }
+            };
+        });
     }
 
-    // Input mask
-    let element = document.querySelectorAll('.mask-phone');
-    element.forEach(function (e) {
-        let mask = IMask(e, {
-            mask: '{+7}(000)000-00-00',
-            lazy: false,
-            placeholderChar: '_'
-        });
-
-        let placeholder = '+7(';
-        e.onfocus = function () {
-            if (this.value === placeholder || this.value === '') {
-                this.value = placeholder
-            }
-        };
-        e.onblur = function () {
-            if (this.value === placeholder) {
-                this.value = ''
-            }
-        };
-    });
-
     // Star rating
-    let rateInput = document.querySelectorAll('.rating-input');
-    rateInput.forEach(function (input) {
-        if (input.classList.contains('rating-read')) {
-            $(input).rating({
-                showCaption: false,
-                showClear: false,
-                displayOnly: true,
-                max: 5,
-                size: 'xs',
-                emptyStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#936f62" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
-                filledStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#317b0c" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
-            });
-        } else {
-            $(input).rating({
-                showCaption: false,
-                showClear: false,
-                stars: 5,
-                min: 0,
-                max: 5,
-                step: 1,
-                size: 'xs',
-                emptyStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#936f62" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
-                filledStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#317b0c" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
-            });
-        }
-    });
+    if ($('.rating-input').length) {
+        let rateInput = document.querySelectorAll('.rating-input');
+        rateInput.forEach(function (input) {
+            if (input.classList.contains('rating-read')) {
+                $(input).rating({
+                    showCaption: false,
+                    showClear: false,
+                    displayOnly: true,
+                    max: 5,
+                    size: 'xs',
+                    emptyStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#936f62" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
+                    filledStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#317b0c" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
+                });
+            } else {
+                $(input).rating({
+                    showCaption: false,
+                    showClear: false,
+                    stars: 5,
+                    min: 0,
+                    max: 5,
+                    step: 1,
+                    size: 'xs',
+                    emptyStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#936f62" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
+                    filledStar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" enable-background="new 0 0 512 512"><path fill-rule="evenodd" clip-rule="evenodd" fill="#317b0c" d="M256 19l84.4 148.9L512 200 392.5 324.2 414.2 493 256 420.8 97.7 493l21.7-168.8L0 200l171.6-32.1L256 19"/></svg>',
+                });
+            }
+        });
+    }
 
     // Select2
-    $('.select-list').select2({
-        minimumResultsForSearch: Infinity,
-    });
+    if ($('.select-list').length) {
+        $('.select-list').select2({
+            minimumResultsForSearch: Infinity,
+        });
 
-    $('.checkout__fields-select').on('select2:select', function (e) {
-        let data = e.params.data.text;
-        $(this).nextAll('.checkout__fields-select-address').text(data);
-    });
+        $('.checkout__fields-select').on('select2:select', function (e) {
+            let data = e.params.data.text;
+            $(this).nextAll('.checkout__fields-select-address').text(data);
+        });
+    }
 
+    // Order delivery method
     if ($('.checkout__delivery-radio').length) {
         $('.checkout__delivery-radio').on('click', function () {
             if ($(this).data('method') === 'postmat') {
@@ -211,6 +171,7 @@ $(function () {
         });
     }
 
+    // Order product quantity
     if ($('.checkout__order-quantity').length) {
         $('.checkout__order-quantity-arrow').on('click', function () {
             let quantityInput = $('.checkout__order-quantity-input');
@@ -230,16 +191,19 @@ $(function () {
         });
     }
 
-    $('.checkout__order-pay-input').on('click', function () {
-        if (!$(this).hasClass('pay-delivery')) {
-            if ($(this).data('method') === 'on-delivery') {
-                $('.checkout__order-pay-delivery').slideDown();
+    // Order pay method
+    if ($('.checkout__order-pay-input').length) {
+        $('.checkout__order-pay-input').on('click', function () {
+            if (!$(this).hasClass('pay-delivery')) {
+                if ($(this).data('method') === 'on-delivery') {
+                    $('.checkout__order-pay-delivery').slideDown();
+                }
+                else {
+                    $('.checkout__order-pay-delivery').slideUp();
+                }
             }
-            else {
-                $('.checkout__order-pay-delivery').slideUp();
-            }
-        }
-    });
+        });
+    }
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');

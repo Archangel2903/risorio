@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#6A2D8B;}
-</style>
-<path class="st0" d="M34.69,5.78H2.31C1.04,5.78,0,6.82,0,8.09v1.32l18.5,7.83L37,9.41V8.09C37,6.82,35.96,5.78,34.69,5.78z"/>
-<path class="st0" d="M18.95,19.56c-0.14,0.06-0.3,0.09-0.45,0.09s-0.31-0.03-0.45-0.09L0,11.92v16.99c0,1.28,1.04,2.31,2.31,2.31
-	h32.38c1.28,0,2.31-1.04,2.31-2.31V11.92L18.95,19.56z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" id="Слой_1" x="0" y="0" version="1.1" viewBox="0 0 37 37" xml:space="preserve"><style>.st0{fill:#6a2d8b}</style><path d="M34.69 5.78H2.31C1.04 5.78 0 6.82 0 8.09v1.32l18.5 7.83L37 9.41V8.09c0-1.27-1.04-2.31-2.31-2.31z" class="st0"/><path d="M18.95 19.56a1.166 1.166 0 0 1-.9 0L0 11.92v16.99c0 1.28 1.04 2.31 2.31 2.31h32.38c1.28 0 2.31-1.04 2.31-2.31V11.92l-18.05 7.64z" class="st0"/></svg>
