@@ -44,6 +44,15 @@ $(function () {
         $(this).toggleClass('active');
         $(this).next().toggleClass('active');
     });
+    $('.main-menu__link').on('click', function (e) {
+        // e.preventDefault();
+        let anchor = $(this).attr('href');
+        let item = $(anchor);
+        $([document.documentElement, document.body]).animate({
+            scrollTop: Number(item.offset().top) - 70
+        }, 1500);
+
+    });
 
     // Callback
     $('.callback').on('click', function () {

@@ -86,7 +86,6 @@ header.header {
   flex-wrap: wrap;
   flex-direction: row;
   max-width: 40px;
-
   &__switch {
     position: absolute;
     top: -50%;
@@ -127,7 +126,6 @@ header.header {
       }
     }
   }
-
   &__list {
     display: flex;
     flex-direction: column;
@@ -145,7 +143,6 @@ header.header {
     background: rgba(26, 1, 39, .9);
     @include transition(all .5s ease-in-out 0s);
     z-index: -1;
-
     &.active {
       right: 0;
       opacity: 1;
@@ -154,7 +151,6 @@ header.header {
       z-index: 100;
     }
   }
-
   &__link {
     max-width: 240px;
     margin-right: 14px;
@@ -319,7 +315,6 @@ header.header {
     max-width: none;
     width: inherit;
     height: inherit;
-
     &__switch {
       display: none;
     }
@@ -336,6 +331,7 @@ header.header {
       opacity: 1;
       visibility: visible;
       background: none;
+      z-index: 0;
     }
     &__link {
       margin-right: 10px;
