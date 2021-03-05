@@ -573,10 +573,7 @@
   .checkout {
     &__fields {
       max-width: none;
-      margin: auto;
-      &-title {
-        padding-right: 25%;
-      }
+      &-title {}
       &-ico {
         top: 21px;
       }
