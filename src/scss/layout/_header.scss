@@ -286,6 +286,14 @@ header.header {
 @include media-breakpoint-up(lg) {
   header.header {
     background: rgba(37, 9, 56, .8);
+
+    &.header-transparent {
+      background: none;
+
+      &.offset-y {
+        background: rgba(37, 9, 56, .8);
+      }
+    }
   }
 
   .header-content-wrap {

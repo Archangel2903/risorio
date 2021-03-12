@@ -10,7 +10,7 @@
 <!-- BODY -->
 <div class="main-wrapper">
     <!-- HEADER -->
-    <header class="header position-fixed">
+    <header class="header header-transparent position-fixed">
         <div class="container">
             <div class="row">
                 <div class="col-lg-1 col-4">
@@ -87,27 +87,20 @@
 
     <!-- CONTENT -->
     <main class="content">
-        <div class="section section-banner">
+        <div class="section section-banner section-banner-order">
             <div class="section-bg">
                 <picture class="section-banner__pic">
-                    <img src="<%= require('./img/banner.jpg') %>" class="section-banner__img" alt="">
-                </picture>
-                <picture class="section-banner__pic section-banner__pic_mobile">
-                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/main-banner_mob.jpg') %>" class="section-banner__img" alt="">
+                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-order.jpg') %>" class="section-banner__img" alt="">
                 </picture>
             </div>
 
             <div class="container banner-container">
                 <div class="row">
-                    <div class="col-md-6 offset-md-6">
+                    <div class="col-lg-6 offset-lg-6">
                         <div class="banner-content">
                             <div class="sale-box">
                                 <span class="sale-box__old-price" data-percent="30">342 <span class="rub">руб.</span></span>
-                                <button class="sale-box__button button-inline btn btn-primary">
-                                    <span class="sale-box__button-label"><img src="<%= require('./img/button-label-stock.png') %>" alt=""> 239<span class="rub">руб.</span></span>
-                                    купить сейчас
-                                    <span class="sale-box__button-itext">Цена заказа по акции</span>
-                                </button>
+                                <span class="sale-box__button-label"><img src="<%= require('./img/button-label-stock.png') %>" alt=""> 239<span class="rub">руб.</span></span>
                             </div>
                         </div>
                     </div>
