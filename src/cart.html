@@ -10,7 +10,7 @@
 <!-- BODY -->
 <div class="main-wrapper">
     <!-- HEADER -->
-    <header class="header header-transparent position-fixed">
+    <header class="header position-fixed">
         <div class="container">
             <div class="row">
                 <div class="col-lg-1 col-4">
@@ -66,16 +66,24 @@
                 <div class="col-lg-11 header-form-wrap d-none py-1">
                     <form action="" class="form-inline header-form">
                         <div class="form-group">
-                            <svg><use xlink:href="img/spritemap.svg#sprite-phone"></use></svg>
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-phone"></use>
+                            </svg>
                             <input type="tel" class="header-form__input mask-phone form-control" placeholder="Ваш телефон">
                         </div>
 
                         <div class="form-group">
-                            <svg><use xlink:href="img/spritemap.svg#sprite-user"></use></svg>
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-user"></use>
+                            </svg>
                             <input type="text" class="header-form__input form-control" placeholder="Ваше имя">
                         </div>
 
-                        <button type="submit" class="header-form__submit btn btn-light">Заказать <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></button>
+                        <button type="submit" class="header-form__submit btn btn-light">Заказать
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-arrow"></use>
+                            </svg>
+                        </button>
 
                         <button type="button" class="header-form__close callback-close">закрыть</button>
                     </form>
@@ -87,7 +95,7 @@
 
     <!-- CONTENT -->
     <main class="content">
-        <div class="section section-banner section-banner-order">
+        <!--<div class="section section-banner section-banner-order">
             <div class="section-bg">
                 <picture class="section-banner__pic">
                     <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-order.jpg') %>" class="section-banner__img" alt="">
@@ -106,10 +114,240 @@
                     </div>
                 </div>
             </div>
+        </div>-->
+
+        <div class="section head-section section-start">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <form action="" class="checkout">
+                            <fieldset class="checkout__box active">
+                                <p class="checkout__box-header">Способы доставки</p>
+
+                                <div class="checkout__box-body">
+                                    <div class="checkout__box-content">
+                                        <div class="checkout__delivery">
+                                            <label class="checkout__delivery-method">
+                                                <input type="radio" name="delivery-method" class="checkout__delivery-radio" data-method="courier" checked>
+                                                <span class="checkout__delivery-box">
+                                                <span class="checkout__delivery-ico">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-delivery-1"></use></svg>
+                                                </span>
+                                                <span class="checkout__delivery-name">Курьерская доставка</span>
+                                            </span>
+                                            </label>
+
+                                            <label class="checkout__delivery-method">
+                                                <input type="radio" name="delivery-method" class="checkout__delivery-radio" data-method="post">
+                                                <span class="checkout__delivery-box">
+                                                <span class="checkout__delivery-ico">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-delivery-2"></use></svg>
+                                                </span>
+                                                <span class="checkout__delivery-name">Почта России</span>
+                                            </span>
+                                            </label>
+
+                                            <label class="checkout__delivery-method">
+                                                <input type="radio" name="delivery-method" class="checkout__delivery-radio" data-method="postmat">
+                                                <span class="checkout__delivery-box">
+                                                <span class="checkout__delivery-ico">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-delivery-3"></use></svg>
+                                                </span>
+                                                <span class="checkout__delivery-name">ПвЗ или Постмат</span>
+                                            </span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="checkout__box-footer justify-content-end">
+                                        <input type="button" class="checkout__footer-button btn btn-primary" data-nav="true" value="Дальше">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="checkout__box">
+                                <p class="checkout__box-header">Данные получателя</p>
+
+                                <div class="checkout__box-body">
+                                    <div class="checkout__box-content">
+                                        <div class="checkout__fields">
+                                            <div class="checkout__fields-box checkout__fields-box_addresses form-group d-none">
+                                                <span class="checkout__fields-ico">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-home"></use></svg>
+                                                </span>
+
+                                                <select name="postmat" id="postmat_address" class="checkout__fields-select select-list" data-placeholder="Выбрать постамат"
+                                                        style="width: 100%;">
+                                                    <option></option>
+                                                    <option value="address1">Address 1</option>
+                                                    <option value="address2">Адрес 2</option>
+                                                    <option value="address3">Адреса 3</option>
+                                                </select>
+
+                                                <p class="checkout__fields-select-address"></p>
+                                            </div>
+
+                                            <label class="checkout__fields-box checkout__fields-box_address form-group">
+                                                <span class="checkout__fields-ico">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-location"></use></svg>
+                                                </span>
+                                                <input type="text" class="checkout__fields-input form-control" placeholder="Адрес доставки">
+                                            </label>
+
+                                            <label class="checkout__fields-box form-group">
+                                                <span class="checkout__fields-ico">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-user"></use></svg>
+                                                </span>
+                                                <input type="text" class="checkout__fields-input form-control" placeholder="Ф.И.О">
+                                            </label>
+
+                                            <label class="checkout__fields-box form-group">
+                                                <span class="checkout__fields-ico">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-phone"></use></svg>
+                                                </span>
+                                                <input type="tel" class="checkout__fields-input mask-phone form-control" placeholder="Телефон">
+                                            </label>
+
+                                            <label class="checkout__fields-box form-group">
+                                                <span class="checkout__fields-ico">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-mail"></use></svg>
+                                                </span>
+                                                <input type="email" class="checkout__fields-input form-control" placeholder="Email">
+                                            </label>
+
+                                            <label class="checkout__fields-box form-group">
+                                            <span class="checkout__fields-ico">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-comment"></use></svg>
+                                                </span>
+                                                <textarea name="order-comment" id="order_comment" class="checkout__fields-input form-control"
+                                                          placeholder="Комментарий к заказу"></textarea>
+                                            </label>
+
+                                            <label class="checkout__field-box form-group pl-lg-4 pl-3">
+                                                <input type="checkbox" class="checkout__check">
+                                                <span class="checkout__check-pseudo"></span>
+                                                <span class="checkout__check-text">Согласие на обработку данных</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="checkout__box-footer">
+                                        <input type="button" class="checkout__footer-button btn btn-outline-secondary text-capitalize" data-nav="false" value="Назад">
+                                        <input type="button" class="checkout__footer-button btn btn-primary" data-nav="true" value="Дальше">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="checkout__box">
+                                <p class="checkout__box-header">Способы оплаты</p>
+
+                                <div class="checkout__box-body">
+                                    <div class="checkout__box-content">
+                                        <div class="checkout__delivery">
+                                            <label class="checkout__delivery-method">
+                                                <input type="radio" name="payment-method" class="checkout__delivery-radio" checked>
+                                                <span class="checkout__delivery-box">
+                                                <span class="checkout__delivery-ico">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-credit-cards"></use></svg>
+                                                </span>
+                                                <span class="checkout__delivery-name">Оплата банковской картой</span>
+                                            </span>
+                                            </label>
+
+                                            <label class="checkout__delivery-method">
+                                                <input type="radio" name="payment-method" class="checkout__delivery-radio">
+                                                <span class="checkout__delivery-box">
+                                                <span class="checkout__delivery-ico">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-iomoney"></use></svg>
+                                                </span>
+                                                <span class="checkout__delivery-name">Ю-мани</span>
+                                            </span>
+                                            </label>
+
+                                            <label class="checkout__delivery-method">
+                                                <input type="radio" name="payment-method" class="checkout__delivery-radio">
+                                                <span class="checkout__delivery-box">
+                                                <span class="checkout__delivery-ico">
+                                                    <svg><use xlink:href="img/spritemap.svg#sprite-qiwi"></use></svg>
+                                                </span>
+                                                <span class="checkout__delivery-name">Qiwi</span>
+                                            </span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="checkout__box-footer">
+                                        <input type="button" class="checkout__footer-button btn btn-outline-secondary text-capitalize" data-nav="false" value="Назад">
+                                        <input type="button" class="checkout__footer-button btn btn-primary" data-nav="true" value="Дальше">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="checkout__box">
+                                <p class="checkout__box-header">Подтверждение заказа</p>
+
+                                <div class="checkout__box-body">
+                                    <div class="checkout__box-content">
+                                        <p>Дата: <b>26.05.2021</b></p>
+                                        <p>Количество: <b>3</b></p>
+                                        <p>Сумма к оплате: <b>1980р.</b></p>
+                                    </div>
+
+                                    <div class="checkout__box-footer">
+                                        <input type="button" class="checkout__footer-button btn btn-outline-secondary text-capitalize" data-nav="false" value="Назад">
+                                        <input type="button" class="checkout__footer-button btn btn-primary" data-nav="true" value="Оплатить">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <!--<fieldset class="checkout__box">
+                                <p class="checkout__box-header"></p>
+
+                                <div class="checkout__box-body">
+                                    <div class="checkout__box-content">
+
+                                    </div>
+
+                                    <div class="checkout__box-footer">
+                                        <input type="button" class="checkout__footer-button btn btn-primary mt-5 mt-xl-auto" value="Назад">
+                                        <input type="button" class="checkout__footer-button btn btn-primary mt-5 mt-xl-auto" value="Дальше">
+                                    </div>
+                                </div>
+                            </fieldset>-->
+                        </form>
+                    </div>
+
+                    <div class="col-lg-6 offset-lg-1 mt-5">
+                        <div class="checkout__order">
+                            <picture class="checkout__order-pic">
+                                <img src="<%= require('./img/product-img-cart.png') %>" alt="product-cart">
+                            </picture>
+
+                            <div class="checkout__order-box">Стоимость доставки: <span class="checkout__order-box-value">250.00 руб</span></div>
+
+                            <label class="checkout__order-box">Количество:
+                                <span class="checkout__order-quantity">
+                                                <span class="checkout__order-quantity-arrow quantity-plus">+</span>
+                                                <input type="number" class="checkout__order-quantity-input" min="1" max="999" value="1">
+                                                <span class="checkout__order-quantity-arrow quantity-minus">-</span>
+                                            </span>
+                            </label>
+
+                            <div class="checkout__order-box">Стоимость заказа: <span class="checkout__order-box-value">239.00 руб</span></div>
+
+                            <div class="checkout__order-box">Итого: <span class="checkout__order-box-value">489.00 руб</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-separator">
+                <svg>
+                    <use xlink:href="img/spritemap.svg#sprite-separator"></use>
+                </svg>
+            </div>
         </div>
 
-        <div class="section head-section section-cart">
-            <picture class="head-decorator">
+        <!--<div class="section head-section section-cart">
+            &lt;!&ndash;<picture class="head-decorator">
                 <img src="<%= require('./img/section-head.png') %>" alt="">
             </picture>
             <picture class="head-decorator head-decorator-bg">
@@ -117,7 +355,7 @@
             </picture>
             <picture class="title-logo">
                 <img src="<%= require('./img/cart-logo-title.png') %>" alt="">
-            </picture>
+            </picture>&ndash;&gt;
 
             <div class="container">
                 <div class="row">
@@ -277,7 +515,7 @@
                     <use xlink:href="img/spritemap.svg#sprite-separator"></use>
                 </svg>
             </div>
-        </div>
+        </div>-->
     </main>
     <!-- CONTENT END -->
 

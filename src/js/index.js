@@ -217,6 +217,47 @@ $(function () {
         });
     }
 
+    // Checkout
+    if ($('.checkout').length) {
+        $('.checkout__box.active').find('.checkout__box-body').slideDown(300);
+        $('.checkout__box-header').on('click', function () {
+            if ($(this).parent().hasClass('active')) {
+                $(this).next().slideUp(300);
+                $(this).parent().removeClass('active');
+            }
+            else {
+                $('.checkout__box').removeClass('active').find('.checkout__box-body').slideUp(300);
+                $(this).next().slideDown(300);
+                $(this).parent().addClass('active');
+            }
+        });
+
+        $('.checkout__footer-button').on('click', function () {
+            let thisBox = $(this).parent().parent().parent();
+            let thisBody = $(this).parent().parent();
+            switch($(this).data('nav')) {
+                case true:
+                    let nextBox = thisBox.next();
+                    thisBox.removeClass('active');
+                    thisBody.slideUp(300);
+                    nextBox.addClass('active');
+                    nextBox.find('.checkout__box-body').slideDown(300);
+                    break;
+                case false:
+                    let prevBox = thisBox.prev();
+                    thisBox.removeClass('active');
+                    thisBody.slideUp(300);
+                    prevBox.addClass('active');
+                    prevBox.find('.checkout__box-body').slideDown(300);
+                    break;
+                default:
+                    console.log('данных нет или они не верны');
+                    break;
+            }
+            // if ($(this).data('nav') == true) {}
+        });
+    }
+
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
     let imgObserve = new IntersectionObserver(function (entries) {

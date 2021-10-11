@@ -7,9 +7,6 @@
   .btn {
     padding: 0 40px;
   }
-  [class*="ico"] + .form-control {
-    padding-left: 90px;
-  }
 
   .swiper-container {
     &.main-slider {
@@ -33,7 +30,7 @@
   }
 
   .head-section {
-    padding-top: 110px;
+    padding-top: 140px;
   }
 
   .title-text {
@@ -266,13 +263,9 @@
   /* CHECKOUT */
 
   .checkout {
-    &__delivery {
-      &-method {
-        width: auto;
-      }
-      &-name {
-        font-size: 24px;
-        line-height: 26px;
+    &__box {
+      &-header {
+        font-size: 26px;
       }
     }
 
@@ -345,14 +338,6 @@
     }
   }
 
-  .checkout {
-    &__delivery {
-      &-ico {
-        margin: 0 auto 18px;
-      }
-    }
-  }
-
   .section-payment {
     &__title {
       margin-bottom: 110px;
@@ -399,6 +384,11 @@
         margin: 0;
       }
     }
+  }
+
+  .video-frame {
+    width: 75%;
+    height: 450px;
   }
 
   .about-types {
@@ -546,6 +536,8 @@
   }
 
   .checkout {
+    padding: 0;
+
     &__delivery {
       justify-content: flex-start;
     }
@@ -553,9 +545,6 @@
     &__fields {
       max-width: none;
       &-title {}
-      &-ico {
-        top: 21px;
-      }
       &-input {
         .form-control {
           height: 80px;
